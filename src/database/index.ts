@@ -1,18 +1,16 @@
-import { knex as knexFile, Knex } from 'knex'
-import { env } from '../env'
+import { DataSource } from 'typeorm'
 
 
-if (!env?.DATABASE_URL) {
-  throw new Error(' ⚠️ DATABASE_URL not found in environment variables')
-}
-
-export const config: Knex.Config = {
-  client: 'pg',
-  connection: process.env.DATABASE_URL,
-  migrations: {
-    extension: 'ts',
-    directory: './src/database/migrations',
-  }
-}
-
-export const knex = knexFile(config)
+export const AppDataSource = new DataSource({
+  type: "postgres",
+  host: "localhost",
+  port: 5432,
+  username: "postgres",
+  password: "postgres",
+  database: "postgres",
+  synchronize: true,
+  logging: true,
+  entities: [],
+  subscribers: [],
+  migrations: [],
+})
