@@ -1,4 +1,4 @@
 node_modules
 .env
 src/database/postgres_data
-# src/database/test_postgres_data
+src/database/test_postgres_data
