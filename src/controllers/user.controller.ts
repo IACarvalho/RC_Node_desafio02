@@ -23,11 +23,6 @@ class UserController {
     await this.userService.createUser(name, username, email, password)
     reply.status(201).send()
   }
-
-  routes(app: FastifyInstance, options: any, done: () => void) {
-    app.post('/users', this.createUser.bind(this))
-    done()
-  }
 }
 
 export const userController = new UserController()
