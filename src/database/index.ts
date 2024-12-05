@@ -1,6 +1,6 @@
 import { DataSource } from 'typeorm'
-import { User } from '../enity/user.entity'
-import { Meal } from '../enity/meal.enity'
+import { User } from '../enities/user.entity'
+import { Meal } from '../enities/meal.enity'
 
 
 export const AppDataSource = new DataSource({

@@ -1,6 +1,6 @@
 import { Service } from 'fastify-decorators'
 import { Repository } from 'typeorm'
-import { User } from '../enity/user.entity'
+import { User } from '../enities/user.entity'
 import { AppDataSource } from '../database'
 import { randomUUID } from 'node:crypto'
 

@@ -1,5 +1,5 @@
 import { FastifyInstance, FastifyReply, FastifyRequest } from "fastify";
-import { UserService } from "../service/user.service";
+import { UserService } from "../services/user.service";
 import { z } from "zod";
 
 
